@@ -31,6 +31,24 @@
 - Bitrix24 REST API (CRM-интеграция)
 - Docker, Docker Compose (Деплой)
 
-## Лицензия
+## API
+
+### **База данных (PostgreSQL)**
+- Таблица `users`:
+  - `user_id` (INT, PRIMARY KEY)
+  - `name` (TEXT)
+  - `phone` (TEXT)
+  - `email` (TEXT)
+  - `category` (TEXT)
+
+### **Bitrix24**
+- `crm.deal.add` – создание сделки.
+- `crm.timeline.comment.add` – сохранение чатов.
+
+## Деплой на VPS
+```sh
+docker-compose up --build -d
+
+### **Лицензия**
 MIT License.
 """

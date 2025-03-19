@@ -26,10 +26,9 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "user" ]
+      test: [ "CMD-SHELL", "pg_isready -U user -d telegram_bot" ]
       interval: 10s
       retries: 5
-      start_period: 5s
 
 volumes:
   pgdata:
